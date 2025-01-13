@@ -11,7 +11,7 @@ def chande_forecast_oscillator(prices, period):
     for i in range(period - 1, len(prices)):
         # Get the window of prices
         y = prices[i - period + 1:i + 1]
-        x = np.arange(len(y))  # Independent variable
+        x = np.arange(len(y))  # Independent variable time
 
         # Perform linear regression: y = mx + b
         m, b = np.polyfit(x, y, 1)  # Slope (m) and intercept (b)
